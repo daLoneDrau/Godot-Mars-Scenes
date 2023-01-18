@@ -1,0 +1,105 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://art/themes/commodore_64/commodore_64_theme.tres" type="Theme" id=1]
+[ext_resource path="res://scripts/src/Base/Resources/Ui/Themes/Commodore64/C64FlatButton.cs" type="Script" id=2]
+[ext_resource path="res://art/themes/commodore_64/widgets/background-purple.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/src/Test_App/BasicGames/GoldenFlutesGreatEscapes/Mars/Scenes/Intro/MarsIntroController.cs" type="Script" id=4]
+[ext_resource path="res://scenes/directories/basic games/Golden Flutes and Great Escapes/Mars/intro/widgets/instructions.tscn" type="PackedScene" id=5]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 4 )
+
+[node name="background" parent="." instance=ExtResource( 3 )]
+
+[node name="top" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.667
+
+[node name="container" type="VBoxContainer" parent="top"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -264.0
+margin_top = -56.0
+margin_right = 264.0
+margin_bottom = 56.0
+custom_constants/separation = 32
+
+[node name="Label" type="Label" parent="top/container"]
+margin_right = 528.0
+margin_bottom = 16.0
+text = "MARS"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="top/container"]
+margin_top = 48.0
+margin_right = 528.0
+margin_bottom = 64.0
+text = "BY DELTON T. HORN"
+align = 1
+valign = 1
+
+[node name="Label3" type="Label" parent="top/container"]
+margin_top = 96.0
+margin_right = 528.0
+margin_bottom = 112.0
+text = "COPYRIGHT 1984 BY DILITHIUM PRESS"
+align = 1
+valign = 1
+
+[node name="bottom" type="Control" parent="."]
+anchor_top = 0.667
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="container" type="VBoxContainer" parent="bottom"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -264.0
+margin_top = -74.0
+margin_right = 264.0
+margin_bottom = 74.0
+custom_constants/separation = 32
+alignment = 1
+
+[node name="btn-start" type="Button" parent="bottom/container"]
+margin_left = 196.0
+margin_right = 332.0
+margin_bottom = 26.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "NEW GAME"
+script = ExtResource( 2 )
+
+[node name="btn-instructions" type="Button" parent="bottom/container"]
+margin_left = 164.0
+margin_top = 58.0
+margin_right = 364.0
+margin_bottom = 84.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "INSTRUCTIONS"
+script = ExtResource( 2 )
+
+[node name="btn-back" type="Button" parent="bottom/container"]
+margin_left = 164.0
+margin_top = 116.0
+margin_right = 364.0
+margin_bottom = 148.0
+rect_min_size = Vector2( 144, 32 )
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "BACK TO MENU"
+script = ExtResource( 2 )
+
+[node name="instructions_popup" parent="." instance=ExtResource( 5 )]
