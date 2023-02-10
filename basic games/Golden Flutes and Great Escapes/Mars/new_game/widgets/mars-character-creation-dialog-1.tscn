@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://art/themes/commodore_64/commodore_64_theme.tres" type="Theme" id=1]
-[ext_resource path="res://scripts/src/Rpg_Base/Resources/Ui/Themes/Commodore64/C64FlatButton.cs" type="Script" id=2]
 
 [sub_resource type="StyleBoxFlat" id=4]
 content_margin_left = 4.0
@@ -209,7 +208,6 @@ mouse_default_cursor_shape = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "ACCEPT"
-script = ExtResource( 2 )
 
 [node name="btn-decline" type="Button" parent="content/container"]
 margin_left = 312.0
@@ -219,4 +217,3 @@ mouse_default_cursor_shape = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "DECLINE"
-script = ExtResource( 2 )
